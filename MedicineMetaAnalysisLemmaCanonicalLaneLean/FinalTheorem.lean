@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.MedicineMetaAnalysisLemmaCanonicalLaneLean.BridgeLemmas
+import HautevilleHouse.MedicineMetaAnalysisLemmaCanonicalLaneLean.GateLemmas
+
+namespace HautevilleHouse
+namespace MedicineMetaAnalysisLemmaCanonicalLaneLean
+
+def ConstrainedMedicineMetaAnalysisClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_medicine_meta_analysis_endgame (A : AdmissibleClass) :
+    ConstrainedMedicineMetaAnalysisClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end MedicineMetaAnalysisLemmaCanonicalLaneLean
+end HautevilleHouse
